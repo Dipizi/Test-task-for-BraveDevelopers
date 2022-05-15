@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/pokemonListFragment"
+        android:name="com.dipizi007.pokedexv20.UI.random_pokemon.PokemonRandomFragment"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_random_pokemon">
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokemonsListDB"
+        android:name="com.dipizi007.pokedexv20.UI.pokemonsDB.PokemonsListDBFragment"
+        android:label="fragment_pokemons_list_db"
+        tools:layout="@layout/fragment_pokemons_list_db" >
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.dipizi007.pokedexv20.UI.splashFragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+</navigation>
