@@ -1,7 +1,9 @@
 package com.dipizi007.pokedexv20.data.room
 
-import androidx.room.*
-import io.reactivex.Completable
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
 import io.reactivex.Single
 
 @Dao

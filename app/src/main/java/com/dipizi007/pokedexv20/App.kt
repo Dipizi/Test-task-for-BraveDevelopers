@@ -1,25 +1,20 @@
 package com.dipizi007.pokedexv20
 
+
 import android.app.Application
-import androidx.room.Room
-import com.dipizi007.pokedexv20.UI.pokemonsDB.PokemonsListService
-import com.dipizi007.pokedexv20.UI.random_pokemon.PokemonListService
-import com.dipizi007.pokedexv20.data.room.AppDB
-import com.dipizi007.pokedexv20.data.room.PokemonDaoImpl
+import com.dipizi007.pokedexv20.di.DaggerPokemonComponent
+import com.dipizi007.pokedexv20.di.module.ContextModule
+import com.dipizi007.pokedexv20.di.module.DaoModule
+import com.dipizi007.pokedexv20.di.module.RetrofitApiModule
 
-class App: Application() {
-
-    val pokemonListService = PokemonListService()
-    lateinit var pokemonsListService: PokemonsListService
-    lateinit var pokemonDaoImpl: PokemonDaoImpl
-    lateinit var dataBase: AppDB
-
+class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        dataBase = Room.databaseBuilder(applicationContext, AppDB::class.java, "database-pok").build()
-        val dao = dataBase.getPokemonsDAO()
-        pokemonDaoImpl = PokemonDaoImpl(dao)
-        pokemonsListService = PokemonsListService(pokemonDaoImpl)
+        DI.pokemonComponent = DaggerPokemonComponent.builder()
+            .contextModule(ContextModule(this))
+            .retrofitApiModule(RetrofitApiModule())
+            .daoModule(DaoModule())
+            .build()
     }
 }

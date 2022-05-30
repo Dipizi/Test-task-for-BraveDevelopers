@@ -1,4 +1,4 @@
-package com.dipizi007.pokedexv20.data.result
+package com.dipizi007.pokedexv20.utils
 
 sealed class Results<T>
 

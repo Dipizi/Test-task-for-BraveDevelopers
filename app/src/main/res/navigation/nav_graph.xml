@@ -6,20 +6,20 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/pokemonListFragment"
-        android:name="com.dipizi007.pokedexv20.UI.random_pokemon.PokemonRandomFragment"
+        android:name="com.dipizi007.pokedexv20.presentation.ui.pokemons_random.PokemonRandomFragment"
         android:label="fragment_pokemon_list"
         tools:layout="@layout/fragment_random_pokemon">
     </fragment>
 
     <fragment
         android:id="@+id/pokemonsListDB"
-        android:name="com.dipizi007.pokedexv20.UI.pokemonsDB.PokemonsListDBFragment"
+        android:name="com.dipizi007.pokedexv20.presentation.ui.pokemons_database.PokemonsListDBFragment"
         android:label="fragment_pokemons_list_db"
         tools:layout="@layout/fragment_pokemons_list_db" >
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.dipizi007.pokedexv20.UI.splashFragment.SplashFragment"
+        android:name="com.dipizi007.pokedexv20.presentation.ui.splash_fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
 </navigation>

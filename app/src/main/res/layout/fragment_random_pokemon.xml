@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.random_pokemon.PokemonRandomFragment">
+    tools:context=".presentation.ui.pokemons_random.PokemonRandomFragment">
 
     <ImageView
         android:id="@+id/ivIconPok"
